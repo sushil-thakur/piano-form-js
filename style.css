@@ -39,17 +39,82 @@ header .column .span{
 
 }
 .volume-slider input{
+    outline: none;
     accent-color: #fff;
 }
-.keys-checkbox imput{
+.keys-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.keys-checkbox input {
     appearance: none;
-    width: 30px;
-    height: 60px;
+    width: 50px;
+    height: 25px;
     cursor: pointer;
     border-radius: 30px;
     background: #4b4b4b;
+    position: relative;
 }
-.piano-keys .key{
+
+.keys-checkbox input::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    top: 50%;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+    left: 25px; 
+    background: #fff;
+}
+.paino-keys{
+    display: flex;
+    margin-top: 20px;
+}
+.paino-keys .key{
+    cursor: pointer;
     list-style: none;
-    color: #a2a2a2
+    color: #a2a2a2;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+}
+.paino-keys .white{
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    margin: 0 -22px 0 -22px;
+  
+    background: linear-gradient( #fff 96%, #eee 4%);
+}
+.paino-keys .white:active{
+    box-shadow: inset -5px 5px 20px rgb(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+}
+.paino-keys .black{
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #000;
+    background: linear-gradient( #333 96%, #000 4%);
+}
+.paino-keys .black:active{
+    box-shadow: inset -5px 5px 10px rgb(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, #000 , #434343);
+}
+.paino-keys span{
+    position: absolute;
+   bottom: 20px;
+   width: 100%;
+   font-size: 1.13rem;
+    text-align: center;
 }
