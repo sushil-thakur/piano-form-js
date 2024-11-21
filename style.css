@@ -75,11 +75,11 @@ header .column .span{
     left: 25px; 
     background: #fff;
 }
-.paino-keys{
+.piano-keys{
     display: flex;
     margin-top: 20px;
 }
-.paino-keys .key{
+.piano-keys .key{
     cursor: pointer;
     list-style: none;
     color: #a2a2a2;
@@ -87,7 +87,7 @@ header .column .span{
     position: relative;
     user-select: none;
 }
-.paino-keys .white{
+.piano-keys .white{
     width: 70px;
     height: 230px;
     border-radius: 8px;
@@ -95,11 +95,11 @@ header .column .span{
   
     background: linear-gradient( #fff 96%, #eee 4%);
 }
-.paino-keys .white:active{
+.piano-keys .white:active{
     box-shadow: inset -5px 5px 20px rgb(0, 0, 0, 0.5);
     background: linear-gradient(to bottom, #eee 0%, #fff 100%);
 }
-.paino-keys .black{
+.piano-keys .black{
     width: 44px;
     height: 140px;
     z-index: 2;
@@ -107,11 +107,11 @@ header .column .span{
     border: 1px solid #000;
     background: linear-gradient( #333 96%, #000 4%);
 }
-.paino-keys .black:active{
+.piano-keys .black:active{
     box-shadow: inset -5px 5px 10px rgb(255, 255, 255, 0.1);
     background: linear-gradient(to bottom, #000 , #434343);
 }
-.paino-keys span{
+.piano-keys span{
     position: absolute;
    bottom: 20px;
    width: 100%;
